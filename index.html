@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Maidaturrohmah 23 ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #fff5f7; overflow-x: hidden; }
+        .font-aesthetic { font-family: 'Dancing Script', cursive; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 182, 193, 0.4); }
+        .floating { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .bg-feminine { background: radial-gradient(circle, #fff5f7 0%, #fee2e2 100%); }
+        .swal2-popup { border-radius: 30px !important; }
+    </style>
+</head>
+<body class="bg-feminine text-gray-800">
+
+    <section class="min-h-screen flex flex-col items-center justify-center relative px-6 text-center">
+        <div class="absolute top-10 left-10 text-4xl animate-pulse">🌸</div>
+        <div class="absolute top-1/2 right-5 text-3xl opacity-40">✨</div>
+        <div class="absolute bottom-10 left-1/4 text-4xl opacity-30">🌷</div>
+
+        <div class="z-10 animate__animated animate__fadeIn">
+            <p class="text-pink-400 font-semibold tracking-[0.4em] uppercase text-xs mb-4">Elegance at Twenty Three</p>
+            <h1 class="text-5xl md:text-8xl font-aesthetic text-pink-600 mb-8 drop-shadow-sm">
+                Maidaturrohmah
+            </h1>
+            
+            <div class="floating mb-10">
+                <div class="glass p-10 rounded-[3rem] shadow-2xl max-w-lg mx-auto border-pink-200">
+                    <p class="text-xl text-gray-700 italic leading-relaxed font-light">
+                        "Selamat bertambah usia untuk perempuan paling cantik. Semoga setiap doa yang dilangitkan hari ini menjadi nyata dengan cara yang paling indah."
+                    </p>
+                </div>
+            </div>
+
+            <button onclick="showSurprise()" class="group relative inline-flex items-center justify-center px-12 py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full hover:from-pink-500 hover:to-rose-500 shadow-xl transform hover:scale-110 active:scale-95">
+                <span class="mr-3">Buka Pesan Mas Alfat</span>
+                <span class="text-2xl animate-bounce">💌</span>
+            </button>
+        </div>
+
+        <footer class="absolute bottom-8 w-full text-pink-400 text-sm tracking-widest font-light">
+            Dibuat dengan segenap hati oleh Mas Tercinta Alfat
+        </footer>
+    </section>
+
+    <script>
+        function showSurprise() {
+            // Suara klik ringan bisa ditambahkan di sini
+            
+            Swal.fire({
+                title: '<span class="font-aesthetic text-4xl text-pink-500">Barakallah Fii Umrik</span>',
+                html: `
+                    <div class="text-center px-2">
+                        <p class="text-gray-600 mb-4">
+                            Untuk <b>Maidaturrohmah</b>, <br>Perempuan Paling Cantik di mata Mas.
+                        </p>
+                        <p class="text-gray-500 italic text-sm leading-relaxed border-t border-pink-100 pt-4">
+                            "Di usia 23 ini, Mas selalu mendoakan agar kamu tetap menjadi sosok yang kuat, penuh keberkahan, dan selalu dalam lindungan-Nya. Terima kasih telah mengizinkan Mas menjadi bagian dari ceritamu."
+                        </p>
+                        <p class="text-pink-500 font-bold mt-6 text-lg">
+                            — Mas Tercinta Alfat —
+                        </p>
+                    </div>
+                `,
+                confirmButtonText: 'Terima Kasih, Mas! 🥰',
+                confirmButtonColor: '#f472b6',
+                showClass: { popup: 'animate__animated animate__zoomIn' },
+                hideClass: { popup: 'animate__animated animate__zoomOut' },
+                backdrop: `rgba(255, 192, 203, 0.3)`
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    finalCelebration();
+                }
+            });
+        }
+
+        function finalCelebration() {
+            // Efek Hujan Hati (Love Rain) setelah klik Terima Kasih
+            const duration = 5 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 40 * (timeLeft / duration);
+                
+                // Variasi Love & Star
+                confetti(Object.assign({}, defaults, { 
+                    particleCount, 
+                    origin: { x: Math.random(), y: Math.random() - 0.2 },
+                    colors: ['#ff0000', '#ff69b4', '#ffb6c1', '#ffd700'],
+                    shapes: ['circle', 'square'], // Jika library mendukung, bisa pakai custom shape
+                }));
+            }, 250);
+
+            // Munculkan tulisan akhir yang smooth
+            setTimeout(() => {
+                Swal.fire({
+                    title: '🌹',
+                    text: 'Enjoy your special day, Tercinta.',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    background: 'transparent',
+                    color: '#db2777'
+                });
+            }, 1000);
+        }
+
+        // Confetti pembuka saat web dimuat
+        window.onload = () => {
+            confetti({
+                particleCount: 80,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#fb923c', '#f472b6']
+            });
+        };
+    </script>
+</body>
+</html>
